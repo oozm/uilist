@@ -1,0 +1,1 @@
+import{_ as t}from"./entry/index-CuMFORFz.js";import{n as o,m as r,U as c,V as s,G as i}from"./vue-oIE3a0W0.js";import"./antd-CPM_kc3N.js";const n={},a={class:"p-4"};function _(d,m){const e=o("loading");return r((c(),s("div",a,[i(" home ")])),[[e,!0]])}const v=t(n,[["render",_]]);export{v as default};
