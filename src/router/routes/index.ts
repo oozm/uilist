@@ -1,7 +1,8 @@
 import type { AppRouteRecordRaw } from '@/router/types';
 
 import { PAGE_NOT_FOUND_ROUTE, REDIRECT_ROUTE } from '@/router/routes/basic';
-import home from './modules/home';
+import VUE from './modules/vue';
+import REACT from './modules/react';
 import about from './modules/about';
 
 import { PageEnum } from '@/enums/pageEnum';
@@ -17,7 +18,7 @@ import { PageEnum } from '@/enums/pageEnum';
 //   routeModuleList.push(...modList);
 // });
 
-export const asyncRoutes = [PAGE_NOT_FOUND_ROUTE, home, about];
+export const asyncRoutes = [PAGE_NOT_FOUND_ROUTE, VUE, REACT, about];
 
 // 根路由
 export const RootRoute: AppRouteRecordRaw = {
