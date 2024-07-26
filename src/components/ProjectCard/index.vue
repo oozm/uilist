@@ -2,7 +2,13 @@
   <Card :title="title" v-bind="$attrs">
     <CardGrid v-for="item in items" :key="item.title" class="!md:w-1/4 !w-full flex flex-col">
       <span class="flex">
-        <Icon :icon="item.icon" :color="item.color" size="30" />
+        <Icon
+          :icon="item.icon"
+          :color="item.color"
+          size="30"
+          v-if="!item.icon.startsWith('http')"
+        />
+        <img :src="item.icon" v-else style="width: 30px" />
         <span class="text-lg ml-4">{{ item.title }}</span>
       </span>
       <div class="flex-1 flex mt-2 text-secondary">{{ item.desc }}</div>
