@@ -3,7 +3,7 @@
     <CardGrid v-for="item in items" :key="item.title" class="!md:w-1/4 !w-full flex flex-col">
       <span class="flex">
         <Icon
-          :icon="item.icon"
+          :icon="item.icon || 'cil:smile'"
           :color="item.color"
           size="30"
           v-if="!item.icon.startsWith('http')"
@@ -37,7 +37,7 @@
             size="28"
             @click="go(item.github)"
           />
-          <span :style="{ color: item.color }">{{ item.star || '--' }}</span>
+          <span class="min-w-10" :style="{ color: item.color }">{{ item.star || '--' }}</span>
         </div>
       </div>
     </CardGrid>

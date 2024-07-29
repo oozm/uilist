@@ -1,11 +1,8 @@
 <template>
   <Layout.Footer :class="prefixCls" v-if="getShowLayoutFooter" ref="footerRef">
     <div :class="`${prefixCls}__links`">
-      <a @click="openWindow(SITE_URL)">{{ t('layout.footer.onlinePreview') }}</a>
-
       <GithubFilled @click="openWindow(GITHUB_URL)" :class="`${prefixCls}__github`" />
-
-      <a @click="openWindow(DOC_URL)">{{ t('layout.footer.onlineDocument') }}</a>
+      <TwitterOutlined @click="openWindow(GITHUB_URL)" :class="`${prefixCls}__github`" />
     </div>
     <div>Copyright &copy;2024 UILIST</div>
   </Layout.Footer>
@@ -14,9 +11,9 @@
   import { computed, unref, ref } from 'vue';
   import { Layout } from 'ant-design-vue';
 
-  import { GithubFilled } from '@ant-design/icons-vue';
+  import { GithubFilled, TwitterOutlined } from '@ant-design/icons-vue';
 
-  import { DOC_URL, GITHUB_URL, SITE_URL } from '@/settings/siteSetting';
+  import { GITHUB_URL } from '@/settings/siteSetting';
   import { openWindow } from '@/utils';
 
   import { useI18n } from '@/hooks/web/useI18n';

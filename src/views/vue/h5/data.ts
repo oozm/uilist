@@ -14,7 +14,7 @@ interface GroupItem {
 export const groupItems = ref<GroupItem[]>([
   {
     title: 'Vant',
-    icon: 'https://fastly.jsdelivr.net/npm/@vant/assets/logo.png',
+    icon: '',
     color: '#1989fa',
     desc: '轻量、可靠的移动端 Vue 组件库，适用于 Vue 2 和 Vue 3。',
     group: '有赞',
@@ -24,7 +24,7 @@ export const groupItems = ref<GroupItem[]>([
   },
   {
     title: 'Mint UI',
-    icon: 'https://avatars.githubusercontent.com/u/12810740?s=48&v=4',
+    icon: '',
     color: '#26a2ff',
     desc: '基于 Vue.js 的移动端组件库，适用于 Vue 2。',
     group: '饿了么',
@@ -34,7 +34,7 @@ export const groupItems = ref<GroupItem[]>([
   },
   {
     title: 'Cube UI',
-    icon: 'https://avatars.githubusercontent.com/u/27521938?s=48&v=4',
+    icon: '',
     color: '#f66',
     desc: '为 Vue.js 开发的精致移动端组件库，适用于 Vue 2。',
     group: '滴滴',
@@ -44,7 +44,7 @@ export const groupItems = ref<GroupItem[]>([
   },
   {
     title: 'NutUI',
-    icon: 'https://img14.360buyimg.com/imagetools/jfs/t1/167902/2/8762/791358/603742d7E9b4275e3/e09d8f9a8bf4c0ef.png',
+    icon: '',
     color: '#fa2c19',
     desc: 'NutUI-Vue 组件库，开箱即用，帮助研发快速开发用户界面，提升开发效率，改善开发体验,适用于 Vue 2 和 Vue 3。',
     group: '京东',
@@ -54,7 +54,7 @@ export const groupItems = ref<GroupItem[]>([
   },
   {
     title: 'Mand Mobile',
-    icon: 'https://avatars.githubusercontent.com/u/27521938?s=48&v=4',
+    icon: '',
     color: '#007bff',
     desc: '面向金融场景的 Vue 移动端组件库，适用于 Vue 2。',
     group: '滴滴',
@@ -78,7 +78,7 @@ export const groupItems = ref<GroupItem[]>([
     color: '#3880ff',
     desc: '与 Ionic 结合的 Vue 组件库，适用于构建高质量的移动应用，适用于 Vue 3。',
     group: 'Ionic 团队',
-    site: 'https://ionicframework.com/docs/vue',
+    site: 'https://ionicframework.com/',
     github: 'https://github.com/ionic-team/ionic-framework',
     star: 0,
   },

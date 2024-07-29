@@ -30,9 +30,6 @@ export function checkStatus(
       errMessage = msg || '用户没有权限（令牌、用户名、密码错误）!';
       if (stp === SessionTimeoutProcessingEnum.PAGE_COVERAGE) {
         userStore.setSessionTimeout(true);
-      } else {
-        // 被动登出，带redirect地址
-        userStore.logout(false);
       }
       break;
     case 403:

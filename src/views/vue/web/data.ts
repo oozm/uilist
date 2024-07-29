@@ -54,7 +54,7 @@ export const groupItems = ref<GroupItem[]>([
   },
   {
     title: 'View UI',
-    icon: 'https://avatars.githubusercontent.com/u/54535603?s=48&v=4',
+    icon: '',
     color: '#e18525',
     desc: 'View UI®，即原先的 iView，是一套基于 Vue2 的开源 UI 组件库，主要服务于 PC 界面的中后台产品。',
     group: 'View UI 团队',
@@ -64,7 +64,7 @@ export const groupItems = ref<GroupItem[]>([
   },
   {
     title: 'View UI Plus',
-    icon: 'https://avatars.githubusercontent.com/u/54535603?s=48&v=4',
+    icon: '',
     color: '#e18525',
     desc: 'View UI Plus 是 View Design 设计体系中基于 Vue3 的一套 UI 组件库，主要用于企业级中后台系统。',
     group: 'View UI 团队',
@@ -94,13 +94,12 @@ export const groupItems = ref<GroupItem[]>([
   },
   {
     title: 'Arco Design Vue',
-    icon: 'https://avatars.githubusercontent.com/u/64576149?s=48&v=4',
+    icon: '',
     color: '#4080ff',
     desc: '基于 Arco Design 的 Vue3 UI 组件库。',
     group: '字节跳动',
     site: 'https://arco.design/vue/docs/start',
     github: 'https://github.com/arco-design/arco-design',
     star: 0,
-  }
-]
-);
+  },
+]);
