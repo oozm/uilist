@@ -172,5 +172,6 @@
   "terminal.integrated.scrollback": 10000,
   "nuxt.isNuxtApp": false,
   "vscodeCustomCodeColor.highlightValue": "v-auth",
-  "vscodeCustomCodeColor.highlightValueColor": "#6366f1"
+  "vscodeCustomCodeColor.highlightValueColor": "#6366f1",
+  "github-actions.workflows.pinned.workflows": ["dynamic/pages/pages-build-deployment"]
 }
