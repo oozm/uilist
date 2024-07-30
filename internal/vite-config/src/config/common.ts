@@ -9,7 +9,7 @@ const commonConfig: (mode: string) => UserConfig = (mode) => ({
     drop: mode === 'production' ? ['console', 'debugger'] : [],
   },
   build: {
-    outDir: './docs',
+    outDir: './dist',
     reportCompressedSize: false,
     chunkSizeWarningLimit: 1500,
     rollupOptions: {
