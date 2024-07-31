@@ -29,7 +29,7 @@ async function createAppConfigPlugin({
     async configResolved(_config) {
       const appTitle = _config?.env?.VITE_GLOB_APP_TITLE ?? '';
       // appTitle = appTitle.replace(/\s/g, '_').replace(/-/g, '_');
-      publicPath = _config.base;
+      publicPath = isBuild ? '/uilist/' : _config.base;
       source = await getConfigSource(appTitle);
     },
     async transformIndexHtml(html) {
