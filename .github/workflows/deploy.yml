@@ -100,9 +100,9 @@ jobs:
           touch dist/.nojekyll
           cp dist/index.html dist/404.html
 
-      - name: Delete gh-pages branch
-        run: |
-          git push origin --delete gh-pages
+      # - name: Delete gh-pages branch
+      #   run: |
+      #     git push origin --delete gh-pages
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
@@ -110,4 +110,4 @@ jobs:
           deploy_key: ${{ secrets.GITHUB_TOKEN  }}
           publish_branch: gh-pages
           publish_dir: ./dist
-          cname: uilist.com
+          CNAME: uilist.com
