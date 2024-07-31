@@ -26,6 +26,8 @@ jobs:
 
       - name: Build project
         run: pnpm run build
+      - name: Verify build output
+        run: ls -alh ./dist # 这一步是为了确保构建成功并生成了 dist 目录，可以根据需要调整
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
