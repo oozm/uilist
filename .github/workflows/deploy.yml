@@ -105,9 +105,9 @@ jobs:
           git push origin --delete gh-pages
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@4
+        uses: peaceiris/actions-gh-pages@v4
         with:
           deploy_key: ${{ secrets.GITHUB_TOKEN  }}
           publish_branch: gh-pages
           publish_dir: ./dist
-          cname: ui
+          cname: uilist.com
