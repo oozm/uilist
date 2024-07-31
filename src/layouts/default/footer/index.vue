@@ -16,7 +16,6 @@
   import { GITHUB_URL } from '@/settings/siteSetting';
   import { openWindow } from '@/utils';
 
-  import { useI18n } from '@/hooks/web/useI18n';
   import { useRootSetting } from '@/hooks/setting/useRootSetting';
   import { useRouter } from 'vue-router';
   import { useDesign } from '@/hooks/web/useDesign';
@@ -24,7 +23,6 @@
 
   defineOptions({ name: 'LayoutFooter' });
 
-  const { t } = useI18n();
   const { getShowFooter } = useRootSetting();
   const { currentRoute } = useRouter();
   const { prefixCls } = useDesign('layout-footer');

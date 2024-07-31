@@ -17,7 +17,6 @@ import { setObjToUrlParams, deepMerge } from '@/utils';
 import { useErrorLogStoreWithOut } from '@/store/modules/errorLog';
 import { useI18n } from '@/hooks/web/useI18n';
 import { joinTimestamp, formatRequestDate } from './helper';
-import { useUserStoreWithOut } from '@/store/modules/user';
 import { AxiosRetry } from '@/utils/http/axios/axiosRetry';
 
 const globSetting = useGlobSetting();
@@ -51,7 +50,7 @@ const transform: AxiosTransform = {
       throw new Error(t('sys.api.apiRequestFailed'));
     }
     //  这里 code，result，message为 后台统一的字段，需要在 types.ts内修改为项目自己的接口返回格式
-    const { code, result, message } = data;
+    const { code, content, message } = data;
 
     // 这里逻辑可以根据项目进行修改
     const hasSuccess = data && Reflect.has(data, 'code') && code === ResultEnum.SUCCESS;
@@ -67,7 +66,7 @@ const transform: AxiosTransform = {
       } else if (options.successMessageMode === 'message') {
         createMessage.success(successMsg);
       }
-      return result;
+      return content;
     }
 
     // 在此处根据自己项目的实际情况对不同的code执行不同的操作
@@ -76,9 +75,8 @@ const transform: AxiosTransform = {
     switch (code) {
       case ResultEnum.TIMEOUT:
         timeoutMsg = t('sys.api.timeoutMessage');
-        const userStore = useUserStoreWithOut();
-        // 被动登出，带redirect地址
-        userStore.logout(false);
+        // 被动登出，带redirect地址 to do
+
         break;
       default:
         if (message) {
